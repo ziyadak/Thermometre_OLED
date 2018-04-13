@@ -15,9 +15,9 @@
  ****************************************************/
 
 #include <Adafruit_MAX31865.h>
-#include "U8glib.h"
+//#include "U8glib.h"
 
-U8GLIB_SSD1351_128X128_332 u8g(13, 11, 6, 8, 9); // Arduino UNO: SW SPI Com: SCK = 13, MOSI = 11, CS = 8, A0 = 9, RESET = 7 (http://electronics.ilsoft.co.uk/ArduinoShield.aspx)
+//U8GLIB_SSD1351_128X128_332 u8g(13, 11, 6, 8, 9); // Arduino UNO: SW SPI Com: SCK = 13, MOSI = 11, CS = 8, A0 = 9, RESET = 7 (http://electronics.ilsoft.co.uk/ArduinoShield.aspx)
 
 // Use software SPI: CS, DI, DO, CLK
 Adafruit_MAX31865 max = Adafruit_MAX31865(10, 11, 12, 13);
@@ -42,7 +42,7 @@ void setup() {
   Serial.println("Adafruit MAX31865 PT100 Sensor Test!");
 
   max.begin(MAX31865_2WIRE);  // set to 2WIRE or 4WIRE as necessary
-
+/*
   // flip screen, if required
   // u8g.setRot180();
   
@@ -61,7 +61,7 @@ void setup() {
   }
   else if ( u8g.getMode() == U8G_MODE_HICOLOR ) {
     u8g.setHiColorByRGB(255,255,255);
-  }
+  }*/
   
   pinMode(6, OUTPUT);
 
@@ -103,12 +103,13 @@ void loop() {
     max.clearFault();
   }
   Serial.println();
-
+/*
   // picture loop
   u8g.firstPage();  
   do {
     draw();
   } while( u8g.nextPage() );
+*/
   
-  delay(1);
+  delay(50);
 }
