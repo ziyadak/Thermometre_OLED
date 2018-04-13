@@ -15,7 +15,7 @@
  ****************************************************/
 
 #include <Adafruit_MAX31865.h>
-//#include "U8glib.h"
+#include "U8glib.h"
 
 //U8GLIB_SSD1351_128X128_332 u8g(13, 11, 6, 8, 9); // Arduino UNO: SW SPI Com: SCK = 13, MOSI = 11, CS = 8, A0 = 9, RESET = 7 (http://electronics.ilsoft.co.uk/ArduinoShield.aspx)
 
